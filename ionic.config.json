@@ -1,5 +1,7 @@
 {
-  "name": "Finance App",
-  "integrations": {},
-  "type": "custom"
+  "name": "finance-app",
+  "type": "custom",
+  "integrations": {
+    "capacitor": {}
+  }
 }
