@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Keuangan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>💰 Keuangan 💰</h1>
+
+  <!-- Ringkasan -->
+  <div class="summary">
+    <div class="card income">
+      <p>Pemasukan</p>
+      <h2 id="totalIncome">Rp 0</h2>
+    </div>
+    <div class="card expense">
+      <p>Pengeluaran</p>
+      <h2 id="totalExpense">Rp 0</h2>
+    </div>
+    <div class="card balance">
+      <p>Saldo</p>
+      <h2 id="balance">Rp 0</h2>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div class="input-card">
+    <select id="type">
+      <option value="income">Pemasukan</option>
+      <option value="expense">Pengeluaran</option>
+    </select>
+
+    <input type="text" id="description" placeholder="Keterangan">
+    <input type="number" id="amount" placeholder="Jumlah (Rp)">
+    <button onclick="addTransaction()">Tambah</button>
+  </div>
+
+  <!-- Target Tabungan -->
+  <div class="saving-card">
+    <h3>🎯 Target Tabungan</h3>
+    <input type="number" id="savingTarget" placeholder="Target (Rp)">
+    <button onclick="saveTarget()">Simpan Target</button>
+    <p id="savingStatus"></p>
+  </div>
+
+  <!-- Riwayat -->
+  <h3>📜 Riwayat</h3>
+  <ul id="transactionList"></ul>
+
+  <button class="clear" onclick="clearAll()">Hapus Semua Data</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
